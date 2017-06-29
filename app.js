@@ -20,11 +20,12 @@ const app = {
 
   handleSubmit(ev) {
     ev.preventDefault()
-    const f = ev.target
+    const form = ev.target
     const flick = {
       id: this.max + 1,
-      name: f.flickName.value,
+      name: form.flickName.value,
     }
+    this.flicks.push(flick)
 
     const listItem = this.renderListItem(flick)
     this.list.appendChild(listItem)
